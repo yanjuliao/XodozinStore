@@ -6,22 +6,22 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta name="author" content="Yan Julião">
         <style>@import"css/login.css";</style>
-        <script src="js/formulario.js"></script>
+        <script src="js/Login.js"></script>
         <title>Xodozin Cadastro</title>
     </head>
     <body>
-        <div class="container-table">
-            <div class="content">
-                <div id="formulario" class="formulario">
+        <div class="container-tabela">
+            <div>
+                <div class="formulario">
                     <div>
-                        <form name="login">
-                            <div id="title">
-                                <h1 id="title-form">Cadastro de novo Usuário</h1>
+                        <form class="login">
+                            <div id="titulo">
+                                <h1 id="titulo-formulario">Cadastro de novo Usuário</h1>
                                 <a class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                             </div>
-                            <div class="container-form">
+                            <div class="container-formulario">
                                 <div class="input_div">
-                                    <input class="input_form" type="text"  id="nome" name="name" placeholder="Digite seu Nome"
+                                    <input class="input_formulario" type="text"  id="nome" name="name" placeholder="Digite seu Nome"
                                     value="" required>
                                 </div>
                                 <div class="input_div">
@@ -29,23 +29,23 @@
                                     placeholder="Digite seu CPF" value="" required>
                                 </div>
                                 <div class="input_div">
-                                    <input class="input_form" type="text" id="email" name="email" placeholder="Digite seu email"
+                                    <input class="input_formulario" type="text" id="email" name="email" placeholder="Digite seu email"
                                     value="" required="@">
                                 </div>
                                 <div class="input_div">
-                                    <input class="input_form" id="senha" type="password" name="password" placeholder="Digite sua Senha" required>
+                                    <input class="input_formulario" id="senha" type="password" name="password" placeholder="Digite sua Senha" required>
                                 </div>
                                 <div class="input_div">                                    
-                                    <input class="input_form" id="cep" name="cep" placeholder="Digite seu CEP" type="text" onblur="buscarCep(this.value)" required>
+                                    <input class="input_formulario" id="cep" name="cep" placeholder="Digite seu CEP" type="text" onblur="buscarCep(this.value)" required>
                                 </div>
                                 <div class="input_div">                                  
-                                    <input class="input_form" id="rua" name="rua" placeholder="Digite a rua" type="text" disabled required>
+                                    <input class="input_formulario" id="rua" name="rua" placeholder="Digite a rua" type="text" disabled required>
                                 </div>
                                 <div class="input_div">
-                                    <input class="input_form" id="bairro" name="bairro" placeholder="Digite seu bairro" disabled type="text" >
+                                    <input class="input_formulario" id="bairro" name="bairro" placeholder="Digite seu bairro" disabled type="text" >
                                 </div>
                                 <div class="input_div">
-                                    <input class="input_form" id="cidade" name="cidade" placeholder="Digite sua cidade" disabled type="text">
+                                    <input class="input_formulario" id="cidade" name="cidade" placeholder="Digite sua cidade" disabled type="text">
                                 </div> 
                                 <div class="input_div">   
                                     <label for="uf">Estado:</label>
@@ -82,7 +82,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <input class="send-buttons" type="button" name="btnEnviar" onclick="validaEmail(); validaNome(); validaSenha(); validaCPF(); cadastrarDados()"> Enviar </input>
+                            <input class="botao" value="ENVIAR" type="button" name="btnEnviar" onclick="validaEmail(); validaNome(); validaSenha(); validaCPF(); cadastrarDados()"></input>
                         </form>
                     </div>
                 </div>
