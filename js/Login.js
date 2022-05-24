@@ -26,7 +26,7 @@ function validaCPF(){
     if(formataCPF(document.getElementById('cpf').value))
         return true;
     else
-        alert('CPF Inválido, o campo precisa ter 11 dígitos sem caractéres')
+        alert('CPF Inválido')
         return false;
 }
 
@@ -84,18 +84,18 @@ function formataNome(nome) {
 
 //Função para validar senha//
 function validaSenha() {
-    if(formataSenha(document.getElementById('senha').value))
+    if(verificaSenha())
         return true;
     else
-        alert('A senha precisa conter mais de 3 caractéres')
+        alert('Os campos de senha são divergentes')
         return false;
 }
 
-function formataSenha(senha) {
-    if(senha.length <= 3)
-        return false;
+function verificaSenha() {
+    if(document.getElementById('senha').value != document.getElementById('senhaConfirm').value)
+        return false
     else
-        return true;
+        return true
 }
 
 //As funções abaixo são para realizar a busca por CEP//
@@ -150,24 +150,46 @@ else {
 }
 };
 
+// Função para validar complemento e número//
+function validaComplementoNum() {
+    if(verificaComplementoNum()){
+        return true;
+    }
+    else
+        alert("Complemento ou Número não estão preenchidos. Verifique")
+        return false;
+}
+
+function verificaComplementoNum() {
+    if ((document.getElementById('complemento').value == '') 
+        || (document.getElementById('numero').value == '')) {
+            return false;
+    }
+    else
+        return true;
+}
+
 //Função para cadastrar os dados//
 function cadastrarDados() {
-    if((formataCPF(document.getElementById('cpf').value)) && (formataEmail) &&
-        (formataNome(document.getElementById('nome').value)) && (formataSenha(document.getElementById('senha').value))) {
+
+    if((formataCPF(document.getElementById('cpf').value)) && (formataEmail()) &&
+        (formataNome(document.getElementById('nome').value)) && (verificaSenha()) && (verificaComplementoNum())) {
 
         let listaDados = JSON.parse(localStorage.getItem('listaDados') || '[]')
 
         listaDados.push(
             {
-                nomeCad:  nome.value, 
-                cpfCad:   cpf.value,
-                emailCad: email.value,
-                senhaCad: senha.value,
-                cepCad:   cep.value,
-                ruaCad:   rua.value,
-                bairroCad:bairro.value,
-                cidadeCad:cidade.value,
-                ufCad:    uf.value
+                nomeCad:        nome.value, 
+                cpfCad:         cpf.value,
+                emailCad:       email.value,
+                senhaCad:       senha.value,
+                cepCad:         cep.value,
+                ruaCad:         rua.value,
+                bairroCad:      bairro.value,
+                cidadeCad:      cidade.value,
+                complementoCad: complemento.value,
+                numeroCad:      numero.value, 
+                ufCad:          uf.value
             }
         )
 

@@ -47,6 +47,8 @@ body {
 
     padding:10px 0;
 
+    height: 10px;
+
 }
 
 .login {
@@ -55,7 +57,9 @@ body {
 
     background-color: #e4e8ee;
 
-    height: 600px;
+    height: 500px;
+
+    width: 400px;
 
     flex-direction: column;
 
@@ -101,9 +105,5 @@ body {
 
     margin-left: -5px;
 
-}
-
-.container-tabela {
-    
 }
 
