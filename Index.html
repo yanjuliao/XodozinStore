@@ -7,11 +7,13 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta name="author" content="Yan Julião">
         <meta name="description" content="Site para venda de produtos de moda feminina">
+        <script src="js/cookie.js"></script>
         <style>
             @import"css/style.css";
+            @import"css/cookies.css";
         </style>
     </head>
-    <body>
+    <body onload="verificaCookie(), exibirTelaCookie()">
         <header> 
             <nav>
                 <h1 class="logo">Xodózin</h1>
@@ -29,6 +31,15 @@
                 <script async src="https://cse.google.com/cse.js?cx=bd457e6b7e115b98d"></script>
             </div>
         </main>
+        <div class="cookies-container">
+            <div class="cookies-content">
+                <p>Este site possui cookies. Deseja aceitar?</p>
+                <div class="cookies-pref">
+                    <button class="cookies-confirm" onclick="verificaNome(),apagarTelaCookie()">Sim</button>
+                    <button class="cookies-confirm" onclick="apagarTelaCookie()">Não</button>
+                </div>
+            </div>
+        </div>
         <footer>
             <ul class="rodape">
                 <li><a href="Sobre.html">Sobre nós</a></li>
