@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="author" content="Yan Julião">
+        <style>@import"css/login.css";</style>
+        <script src="js/login.js"></script>
+        <title>Xodozin Cadastro</title>
+    </head>
+    <body>
+        <div class="container-tabela">
+            <div>
+                <div class="formulario">
+                    <div>
+                        <form class="login">
+                            <div id="titulo">
+                                <h1 id="titulo-formulario">Cadastro de novo Usuário</h1>
+                                <a class="close"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="container-formulario">
+                                <div class="input_div">
+                                    <input class="input_formulario" type="text"  id="nome" name="name" placeholder="Digite seu Nome"
+                                    value="" required>
+                                </div>
+                                <div class="input_div">
+                                    <input type="text" id="cpf" name="cpf" title="Deve conter 11 dígitos" 
+                                    placeholder="Digite seu CPF" value="" required>
+                                </div>
+                                <div class="input_div">
+                                    <input class="input_formulario" type="text" id="email" name="email" placeholder="Digite seu email"
+                                    value="" required="@">
+                                </div>
+                                <div class="input_div">
+                                    <input class="input_formulario" id="senha" type="password" name="password" placeholder="Digite sua Senha"
+                                    value="" required>
+                                </div>
+                                <div class="input_div">
+                                    <input class="input_formulario" id="senhaConfirm" type="password" name="password" placeholder="Digite sua Senha novamente" required>
+                                </div>
+                                <div class="input_div">                                    
+                                    <input class="input_formulario" id="cep" name="cep" placeholder="Digite seu CEP" type="text" onblur="buscarCep(this.value)" required>
+                                </div>
+                                <div class="input_div">                                  
+                                    <input class="input_formulario" id="rua" name="rua" type="text" disabled required>
+                                </div>
+                                <div class="input_div">
+                                    <input class="input_formulario" id="bairro" name="bairro" disabled type="text" >
+                                </div>
+                                <div class="input_div">
+                                    <input class="input_formulario" id="cidade" name="cidade" disabled type="text">
+                                </div> 
+                                <div class="input_div">
+                                    <input class="input_formulario" id="complemento" value="" placeholder="complmento" name="complemento" required>
+                                </div>
+                                <div class="input_div">
+                                    <input class="input_formulario" id="numero" value="" placeholder="Número" name="n" required>
+                                </div>
+                                <div class="input_div">   
+                                    <label for="uf">Estado:</label>
+                                </div>
+                                <div class="input_div">
+                                    <select disabled id="uf">
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <input class="botao" value="ENVIAR" type="button" name="btnEnviar" onclick="validaEmail(); validaNome(); validaSenha(); validaComplementoNum(); validaCPF(); cadastrarDados()"></input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
