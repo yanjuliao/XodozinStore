@@ -69,7 +69,7 @@ nav {
 }
 
 main {
-    background: url("../img/Fundo.jpg") ;
+    background-image: url("../img/Fundo.jpg") ;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
