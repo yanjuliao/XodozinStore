@@ -22,6 +22,39 @@ a:hover {
     cursor: default;
 }
 
+.titulo {
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: default;
+}
+
+.mensagem {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: default;
+}
+
+.containertxt {
+    position: fixed;
+    width: 50%;
+    top: 20rem;
+    z-index: 1000;
+    padding: 1rem;
+    background: rgba( 255, 255, 255, 0.25 );
+    background-color: rgba(30, 221, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17.5px );
+    -webkit-backdrop-filter: blur( 17.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
 li {
     margin-left: 20px;
 }
@@ -37,7 +70,9 @@ nav {
 
 main {
     background-color: #ebf5f5;
-    background-repeat: repeat;
+    background: url("/img/Fundo.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     height: 84vh;
 }
