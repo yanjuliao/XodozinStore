@@ -8,15 +8,21 @@
         <meta name="author" content="Yan Julião">
         <meta name="description" content="Site para venda de produtos de moda feminina">
         <script src="js/cookie.js"></script>
+        <script src="js/menu.js"></script>
         <style>
-            @import"css/style.css";
+            @import"css/menu.css";
             @import"css/cookies.css";
         </style>
     </head>
     <body onload="verificaCookie(), exibirTelaCookie()">
         <header> 
-            <nav>
+            <nav id="nav">
                 <h1 class="logo">Xodózin</h1>
+                <button id="iconeMenu" onclick="toggleMenu()">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </button>
                 <ul class = "menu">
                     <li><a href="login.html">Login</a></li>
                     <li><a href="tshirt.html">T-Shirt</a></li>

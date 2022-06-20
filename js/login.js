@@ -175,7 +175,6 @@ function cadastrarDados() {
     if((formataCPF(document.getElementById('cpf').value)) && (formataEmail()) &&
         (formataNome(document.getElementById('nome').value)) && (verificaSenha()) && (verificaComplementoNum())) {
 
-        alert('Dados salvos no localstorage com sucesso')
         let listaDados = JSON.parse(localStorage.getItem('listaDados') || '[]')
 
         listaDados.push(
